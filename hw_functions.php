@@ -19,7 +19,7 @@ function exponentiate($numb, $pow)
     return $result;
 }
 
-echo exponentiate(5, 4);
+print_r(exponentiate(5, 4));
 echo "<br>";
 echo "<br>";
 //2. Написать функцию, которая проверяет, являются ли все буквы в строке строчными
@@ -31,66 +31,70 @@ echo "<br>";
 function checkFont($str)
 {
     if ($str == strtolower($str)) {
-        $letters = 'Буквы в строке строчные';
-//        return 'Буквы в строке строчные';
+//        $letters = 'Буквы в строке строчные';
+        $letters = true;
 
     } else {
-        $letters = 'Невсе буквы в строке строчные';
-//        return 'Невсе буквы в строке строчные';
+//        $letters = 'Невсе буквы в строке строчные';
+        $letters = false;
+
     }
     return $letters;
 }
 
-echo checkFont('cnskjcnlxnalncanFFFFF');
+print_r(checkFont('cnskjcnlxnalncanFFFFF'));
 echo "<br>";
 echo "<br>";
 //Написать функцию, которая генерирует массив указанной длинны со случайными значениями
 echo '3 Написать функцию, которая генерирует массив указанной длинны со случайными значениями';
 echo "<br>";
 echo "<br>";
-function createRandomValuesArr()
+function createRandomValuesArr($indicateTheLength)
 {
-    return $arr = array_fill(0, 10, random_bytes(10));
+    return $arr = array_fill(0, $indicateTheLength, random_bytes(10));
 }
+
 echo '<pre>';
-print_r(createRandomValuesArr());
+print_r(createRandomValuesArr(10));
 echo '</pre>';
+
 echo "<br>";
 echo "<br>";
 //ф-ция, которая по номеру дня возвращает его название
 echo '4 Ф-ция, которая по номеру дня возвращает его название';
 echo "<br>";
 
-function showDay($numb){
-    $day = ['Понедельник', 'Вторник','Среда', 'Четверг','Пятница', 'Суббота','Воскресенье'];
-    foreach ($day as $key=>$value) {
+function showDay($numb)
+{
+    $day = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+    foreach ($day as $key => $value) {
         if ($numb == 1) {
-            print_r( $day[0]);
+            print_r($day[0]);
             break;
-        }elseif ($numb == 2){
-            print_r( $day[1]);
+        } elseif ($numb == 2) {
+            print_r($day[1]);
             break;
-        }elseif ($numb == 3){
-            print_r( $day[2]);
+        } elseif ($numb == 3) {
+            print_r($day[2]);
             break;
-        }elseif ($numb == 4){
-            print_r( $day[3]);
+        } elseif ($numb == 4) {
+            print_r($day[3]);
             break;
-        }elseif ($numb == 5){
-            print_r( $day[4]);
+        } elseif ($numb == 5) {
+            print_r($day[4]);
             break;
-        }elseif ($numb == 6){
-            print_r( $day[5]);
+        } elseif ($numb == 6) {
+            print_r($day[5]);
             break;
-        }elseif ($numb == 7){
-            print_r( $day[6]);
+        } elseif ($numb == 7) {
+            print_r($day[6]);
             break;
         }
     }
 }
 
 
-print_r (showDay(5));
+print_r(showDay(5));
 echo "<br>";
 echo "<br>";
 
@@ -98,15 +102,15 @@ echo "<br>";
 echo 'Написать функцию которая выводит n-ое число Фибоначчи';
 echo "<br>";
 echo "<br>";
-function outputsNumberFibonacci($value){
-    if ($value == 0){
+function outputsNumberFibonacci($value)
+{
+    if ($value == 0) {
         return 0;
     }
-    if ($value == 1 || $value == 2){
+    if ($value == 1 || $value == 2) {
         return 1;
-    }
-    else {
-        return $value-1+$value-2;
+    } else {
+        return $value - 1 + $value - 2;
     }
 }
 
