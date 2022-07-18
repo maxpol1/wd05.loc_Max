@@ -69,25 +69,25 @@ function showDay($numb)
     $day = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
     foreach ($day as $key => $value) {
         if ($numb == 1) {
-            print_r($day[0]);
+            return $day[0];
             break;
         } elseif ($numb == 2) {
-            print_r($day[1]);
+            return $day[1];
             break;
         } elseif ($numb == 3) {
-            print_r($day[2]);
+            return $day[2];
             break;
         } elseif ($numb == 4) {
-            print_r($day[3]);
+            return $day[3];
             break;
         } elseif ($numb == 5) {
             print_r($day[4]);
             break;
         } elseif ($numb == 6) {
-            print_r($day[5]);
+            return $day[5];
             break;
         } elseif ($numb == 7) {
-            print_r($day[6]);
+            return $day[6];
             break;
         }
     }
